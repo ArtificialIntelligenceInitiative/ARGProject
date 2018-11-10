@@ -15,8 +15,6 @@ for p in pathlib.Path('.').iterdir():
         
     
 
-#print(os.path.splitext("test_project.py")[0])
-
 print('Hello, World!')
 s = "hello "
  
