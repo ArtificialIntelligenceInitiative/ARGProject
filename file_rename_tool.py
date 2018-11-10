@@ -11,7 +11,17 @@ for p in pathlib.Path('.').iterdir():
         new_file_name += ".пы"
         print(p)
         print(new_file_name)
-        flist.append(p)
+        f = open(p)
+        line = f.readline()
+        with open(new_file_name, "a") as new_file:
+            while line:
+                line = f.readline()
+                print(line)
+                new_file_line = translit(line,'ru')
+                new_file.write(new_file_line)
+
+        f.close()
+        new_file.close()    
         
     
 
